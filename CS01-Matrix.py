@@ -1,26 +1,12 @@
-import numpy as np
-MatrixOne = []
-MatrixTwo = []
-loop = 1
-MatrixColumns = int(input("EnterYourColumns : "))
-MatrixRows = int(input("EnterYourRows : "))
-while( loop <2):
-    print("EnterrYourMatrix",loop)
-    for i in range(MatrixRows) :
-        for j in range(MatrixColumns) :
-            print("MatrixColumns [",i,",",j,"] :",end ="")
-            if(loop == 1):
-                MatrixOneInput = int(input(""))
-                MatrixOne.append(MatrixOneInput)
-            else:
-                MatrixTwoInput = int(input(""))
-                MatrixTwo.append(MatrixTwoInput)
-    loop += 1
-NumpyMatrixOne = np.asarray(MatrixOne)
-NumpyMatrixTwo = np.asarray(MatrixTwo)
-NewMatrixOne=NumpyMatrixOne.reshape(MatrixRows,MatrixColumns)
-NewMatrixTwo=NumpyMatrixTwo.reshape(MatrixRows,MatrixColumns)
-print(NewMatrixOne,"\n=========================")
-print(NewMatrixTwo,"\n=========================")
-sum = np.add(NewMatrixOne, NewMatrixTwo)
-print(sum)
+import numpy as np 
+Array = []
+Loop =int(input("Enter Your loop : "))
+while(Loop%3 != 0):
+    print('Please Enter Again')
+    Loop = int(input("Enter yoour loop : "))
+print("Enter Your Array: ")
+for i in range(Loop):
+    Array += [int(input(""))]
+NewArray = np.asarray(Array)
+NewArrayNumpy = NewArray.reshape(int(Loop/3),3)
+print(NewArrayNumpy)

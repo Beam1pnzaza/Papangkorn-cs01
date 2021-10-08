@@ -1,4 +1,4 @@
-Num = int(input('Enter your lop:'))
+Num = int(input('Enter your loop:'))
 NumTotal=[]
 for i in range(Num):
     data = int(input('Enter your data:'))
